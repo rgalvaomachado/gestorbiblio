@@ -1,0 +1,36 @@
+body {
+    background-color: #f4f4f4;
+}
+.container {
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+    max-width: 600px;
+}
+h1 {
+    color: #333;
+}
+p {
+    color: #666;
+    text-align: justify;
+}
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.btn:hover {
+    background-color: #0056b3;
+}
+.logo {
+    width: 120px;
+    margin-bottom: 15px;
+}

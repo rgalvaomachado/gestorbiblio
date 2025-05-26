@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/public/icon/livro.png">
+    <link href="/public/css/global.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7ca1b2bc88.js" crossorigin="anonymous"></script>
+    <script src="/public/view/livro/index.js"></script>
+    <title>Usuario</title>
+</head>
+<body>
+	<label class="title">Editar Livro</label>
+	<br>
+	<label class="message_alert" id="messageAlert"></label>
+	<br>
+	<form id="editar">
+		<input type="hidden" name="id">
+		<label>Titulo</label>
+        <br>
+        <input type="text" class='input' name="titulo" required>
+        <br>
+        <label>Editora</label>
+        <br>
+        <input type="text" class='input' name="editora" required>
+        <br>
+        <label>Edicao</label>
+        <br>
+        <input type="number" class='input' name="edicao" step="1" min="1" required>
+        <br>
+        <label>Ano Publicação</label>
+        <br>
+        <input type="number" class='input' name="publicacao" step="1" min="1" required>
+        <br>
+        <label>Preço</label>
+        <br>
+        <input type="text" class='input' name="preco" min="1" required>
+        <br>
+        <label>Autor</label>
+        <br>
+        <input type="hidden" name="autores[]">
+        <table class="list" id="listAutores">
+            <tbody>
+                <tr>
+                    <td>
+                        <select class='input coluna' id="autor"></select>
+                    </td>
+                    <td>
+                        <a><i onclick="addAutor(this)" class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <label>Assunto</label>
+        <br>
+        <input type="hidden" name="codAs" id="codAs">
+        <select class='input' name="assunto"></select>
+        <br>
+        <input class='button' type="submit" value="Editar">
+	</form>
+	<br>
+    <label class="title"><a href="/livro"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></label>
+	<script>
+        window.addEventListener('load', function() {
+            load();
+            loadAutor();
+            loadAssunto();
+        });
+    </script>
+</body>
+</html>

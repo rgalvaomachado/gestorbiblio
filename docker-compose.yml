@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: ./docker
+    image: custom-php:8.2-apache
+    container_name: gestorbiblio
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/html
+      - ./docker/apache-config:/etc/apache2/sites-enabled
+    environment:
+      APACHE_DOCUMENT_ROOT: /var/www/html
+    working_dir: /var/www/html
+    command: >
+      bash -c "
+      a2enmod rewrite && \
+      apache2-foreground"
+    restart: always
+    networks:
+      - internal-network
+
+  db:
+    image: mysql:8.0
+    container_name: db_localhost
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+    restart: always
+    networks:
+     - internal-network
+
+networks:
+  internal-network:
+    driver: bridge

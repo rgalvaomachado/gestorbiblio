@@ -1,0 +1,19 @@
+{
+    "name": "rgalvaomachado/gestorbiblio",
+    "autoload": {
+        "psr-4": {
+            "Rgalvaomachado\\Gestorbiblio\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "rgalvaomachado"
+        }
+    ],
+    "require": {
+        "dompdf/dompdf": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    }
+}

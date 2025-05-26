@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="/public/icon/livro.png">
+    <link href="/public/css/global.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7ca1b2bc88.js" crossorigin="anonymous"></script>
+    <script src="/public/view/assunto/index.js"></script>
+    <title>Assunto</title>
+</head>
+<body>
+	<label class="title">Deletar Assunto</label>
+	<br>
+	<label class="message_alert" id="messageAlert"></label>
+	<br>
+	<form id="deletar">
+		<input type="hidden" name="id">
+		<label>Descrição</label>
+		<br>
+		<input class="input" name="descricao" disabled>
+		<br>
+		<input class='button deletar' type="submit" value="Deletar">
+	</form>
+	<br>
+    <label class="title"><a href="/assunto"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></label>
+	<script>
+        window.addEventListener('load', function() {
+			load()        
+		});
+    </script>
+</body>
+</html>

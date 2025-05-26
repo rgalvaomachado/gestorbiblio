@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/public/icon/livro.png">
+    <link href="/public/css/global.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7ca1b2bc88.js" crossorigin="anonymous"></script>
+    <script src="/public/view/livro/index.js"></script>
+    <title>Livro</title>
+</head>
+<body>
+    <label class="title">Livro</label> 
+    <a class="title" href="/livro/criar"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+    <a id="report" class="title" href=""><i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+    <br>
+    <label class="message_alert" id="messageAlert"></label>
+    <br>
+    <table class="list">
+        <thead>
+            <tr>
+                <th>
+                    Código
+                </th>
+                <th>
+                    Título
+                </th>
+                <th>
+                    Editora
+                </th>
+                <th>
+                    Edição
+                </th>
+                <th>
+                    Ano de publicação
+                </th>
+                <th>
+                    Preço
+                </th>
+                <th>
+                    Editar
+                </th>
+                <th>
+                    Deletar
+                </th>
+            </tr>
+        </thead>
+        <tbody id='lista'>
+        </tbody>
+    </table>
+
+    <br>
+    <label class="title"><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></label>
+
+    <script>
+        window.addEventListener('load', function() {
+            loadAll();
+        });
+    </script>
+</body>
+</html>
